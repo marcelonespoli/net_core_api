@@ -1,9 +1,7 @@
-﻿using Events.Domain.Core.Events;
+﻿using Conferences.Domain.Core.Events;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Events.Domain.Core.Notifications
+namespace Conferences.Domain.Core.Notifications
 {
     public class DomainNotification : Event
     {
