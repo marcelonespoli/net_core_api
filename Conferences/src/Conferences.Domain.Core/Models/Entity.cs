@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Results;
+using System;
 
-namespace Events.Domain.Core.Models
+namespace Conferences.Domain.Core.Models
 {
     public abstract class Entity<T> : AbstractValidator<T> where T : Entity<T>
     {

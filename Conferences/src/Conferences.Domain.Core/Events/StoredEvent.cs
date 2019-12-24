@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Events.Domain.Core.Events
+namespace Conferences.Domain.Core.Events
 {
     public class StoredEvent : Event
     {
@@ -11,11 +11,11 @@ namespace Events.Domain.Core.Events
         // EF Constructor
         protected StoredEvent() { }
 
-        public StoredEvent(Event runEvent, string data, string user)
+        public StoredEvent(Event conference, string data, string user)
         {
             Id = Guid.NewGuid();
-            AggregateId = runEvent.AggregateId;
-            MessageType = runEvent.MessageType;
+            AggregateId = conference.AggregateId;
+            MessageType = conference.MessageType;
             Data = data;
             User = user;
         }

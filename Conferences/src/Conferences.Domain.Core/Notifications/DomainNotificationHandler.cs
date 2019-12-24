@@ -1,12 +1,11 @@
 ﻿using MediatR;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Linq;
 
-namespace Events.Domain.Core.Notifications
+namespace Conferences.Domain.Core.Notifications
 {
     public class DomainNotificationHandler : INotificationHandler<DomainNotification>
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Events.Service.Api
+namespace Conferences.Service.Api
 {
     public class Program
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Events.Service.Api.Controllers
+namespace Conferences.Service.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
