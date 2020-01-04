@@ -37,10 +37,16 @@ namespace Conferences.Application.AppServies
             return _mapper.Map<IEnumerable<CategoryViewModel>>(categories);
         }
 
-        public IEnumerable<ConferenceViewModel> GetMyConferences(Guid id, Guid organizerId)
+        public IEnumerable<ConferenceViewModel> GetMyConferences(Guid organizerId)
+        {
+            var conferences = _conferenceRepository.GetConferencesByOrganizer(organizerId);
+            return _mapper.Map<IEnumerable<ConferenceViewModel>>(conferences);
+        }
+
+        public ConferenceViewModel GetMyConferenceById(Guid id, Guid organizerId)
         {
             var conferences = _conferenceRepository.GetMyConferenceById(id, organizerId);
-            return _mapper.Map<IEnumerable<ConferenceViewModel>>(conferences);
+            return _mapper.Map<ConferenceViewModel>(conferences);
         }
 
         public ConferenceViewModel GetById(Guid id)

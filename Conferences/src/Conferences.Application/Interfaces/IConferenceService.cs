@@ -9,7 +9,8 @@ namespace Conferences.Application.Interfaces
     {
         IEnumerable<ConferenceViewModel> GetAll();        
         IEnumerable<CategoryViewModel> GetCategories();
-        IEnumerable<ConferenceViewModel> GetMyConferences(Guid id, Guid organizerId);
+        IEnumerable<ConferenceViewModel> GetMyConferences(Guid organizerId);
+        ConferenceViewModel GetMyConferenceById(Guid id, Guid organizerId);
         ConferenceViewModel GetById(Guid id);
         RegisterConferenceCommand RegisterConference(ConferenceViewModel conferenceViewModel);
         UpdateConferenceCommand UpdateConference(ConferenceViewModel conferenceViewModel);

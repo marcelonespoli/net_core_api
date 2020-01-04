@@ -6,15 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Conference.Infra.CrossCutting.Identity\Conference.Infra.CrossCutting.Identity.csproj" />
     <ProjectReference Include="..\Conferences.Application\Conferences.Application.csproj" />
     <ProjectReference Include="..\Conferences.Infra.CrossCutting.IoC\Conferences.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
