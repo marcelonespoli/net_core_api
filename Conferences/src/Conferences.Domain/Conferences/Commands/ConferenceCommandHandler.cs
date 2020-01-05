@@ -42,7 +42,7 @@ namespace Conferences.Domain.Conferences.Commands
 
             var conference = Conference.ConferenceFactory.NewConferenceComplety(message.Id, message.Name, message.ShortDescription,
                 message.LongDescription, message.StartDate, message.EndDate, message.Free, message.Value,
-                message.Online, message.CompanyName, message.OrganizerId, address, message.CategoryId);
+                message.Online, message.CompanyName, _user.GetUserId(), address, message.CategoryId);
 
             if (!IsConferenceValid(conference)) return Task.FromResult(Unit.Value);
 
@@ -74,7 +74,7 @@ namespace Conferences.Domain.Conferences.Commands
 
             var conference = Conference.ConferenceFactory.NewConferenceComplety(message.Id, message.Name, message.ShortDescription,
                 message.LongDescription, message.StartDate, message.EndDate, message.Free, message.Value,
-                message.Online, message.CompanyName, message.OrganizerId, currentConference.Address, message.CategoryId);
+                message.Online, message.CompanyName, _user.GetUserId(), currentConference.Address, message.CategoryId);
 
             if (!conference.Online && conference.Address == null)
             {

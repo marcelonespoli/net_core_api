@@ -32,7 +32,7 @@ namespace Conferences.Infra.CrossCutting.IoC
         public static void RegisterServices(IServiceCollection services)
         {
             // ASPNET
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             var mappingConfig = AutoMapperConfiguration.RegisterMapping();
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);

@@ -65,7 +65,7 @@ namespace Conferences.Service.Api.Controllers
         }
 
         [HttpPost]
-        [Route("Conferences")]
+        [Route("conferences")]
         public IActionResult Post([FromBody] ConferenceViewModel conferenceViewModel)
         {
             if (!IsModelStateValid())
@@ -78,7 +78,7 @@ namespace Conferences.Service.Api.Controllers
         }
         
         [HttpPut]
-        [Route("conferences/{id:guid}")]
+        [Route("conferences")]
         public IActionResult Put([FromBody] ConferenceViewModel conferenceViewModel)
         {
             if (!IsModelStateValid())

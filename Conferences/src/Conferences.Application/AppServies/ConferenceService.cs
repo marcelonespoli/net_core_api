@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace Conferences.Application.AppServies
 {
     public class ConferenceService : IConferenceService
-    {        
+    {
         private readonly IMapper _mapper;
         private readonly IMediatorHandler _mediatorHandler;
         private readonly IConferenceRepository _conferenceRepository;

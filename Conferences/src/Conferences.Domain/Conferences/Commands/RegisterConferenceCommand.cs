@@ -9,6 +9,7 @@ namespace Conferences.Domain.Conferences.Commands
         public AddAddressConferenceCommand Address { get; private set; }
 
         public RegisterConferenceCommand(
+            Guid id,
             string name, 
             string shortDescription, 
             string longDescription,
@@ -22,6 +23,7 @@ namespace Conferences.Domain.Conferences.Commands
             Guid categoryId,
             AddAddressConferenceCommand address)
         {
+            Id = id;
             Name = name;
             ShortDescription = shortDescription;
             LongDescription = longDescription;

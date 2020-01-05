@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Conferences.Service.Api
 {
@@ -33,7 +34,9 @@ namespace Conferences.Service.Api
 
             //services.AddAutoMapper();
 
-            services.AddMediatR(typeof(Startup));
+            //services.AddMediatR(typeof(Startup));
+            var assembly = AppDomain.CurrentDomain.Load("Conferences.Domain");
+            services.AddMediatR(assembly);
 
             NativeInjectorBootStrapper.RegisterServices(services);
         }
