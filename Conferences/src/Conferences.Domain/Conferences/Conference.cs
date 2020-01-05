@@ -8,6 +8,27 @@ namespace Conferences.Domain.Conferences
 {
     public class Conference : Entity<Conference>
     {
+        public Conference(
+            string nome,
+            DateTime startDate,
+            DateTime endDate,
+            bool free,
+            decimal value,
+            bool online,
+            string companyName)
+        {
+            Id = Guid.NewGuid();
+            Name = nome;
+            StartDate = startDate;
+            EndDate = endDate;
+            Free = free;
+            Value = value;
+            Online = online;
+            CompanyName = companyName;
+        }
+
+        private Conference() { }
+
         public string Name { get; private set; }
         public string ShortDescription { get; private set; }
         public string LongDescription { get; private set; }
@@ -29,7 +50,6 @@ namespace Conferences.Domain.Conferences
         public virtual Address Address { get; private set; }
         public virtual Organizer Organizer { get; private set; }
 
-        private Conference() { }
 
         public void AddAddress(Address address)
         {
@@ -161,6 +181,7 @@ namespace Conferences.Domain.Conferences
                     Online = online,
                     CompanyName = companyName,
                     Address = address,
+                    AddressId = address?.Id,
                     CategoryId = categoryId
                 };
 
@@ -168,7 +189,10 @@ namespace Conferences.Domain.Conferences
                     conference.OrganizerId = organizerId.Value;
 
                 if (online)
+                {
                     conference.Address = null;
+                    conference.AddressId = null;
+                }
 
                 return conference;
             }

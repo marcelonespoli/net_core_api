@@ -12,6 +12,7 @@ namespace Conferences.Application.AutoMapper
         {
             CreateMap<ConferenceViewModel, RegisterConferenceCommand>()
                 .ConstructUsing(c => new RegisterConferenceCommand(
+                    c.Id,
                     c.Name,
                     c.ShortDescription,
                     c.LongDescription,
@@ -54,7 +55,7 @@ namespace Conferences.Application.AutoMapper
 
             CreateMap<AddressViewModel, AddAddressConferenceCommand>()
                 .ConstructUsing(c => new AddAddressConferenceCommand(
-                    Guid.NewGuid(), 
+                    c.Id, 
                     c.Address1,
                     c.Address2,
                     c.Address3,

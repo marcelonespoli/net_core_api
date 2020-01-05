@@ -10,6 +10,7 @@ namespace Conferences.Application.ViewModels
             Id = Guid.NewGuid();
             Address = new AddressViewModel();
             Category = new CategoryViewModel();
+            Address.ConferenceId = Id;
         }
 
         [Key]

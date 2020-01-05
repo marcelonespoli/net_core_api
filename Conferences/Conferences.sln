@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conferences.Domain.Core", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conferences.Service.Api", "src\Conferences.Service.Api\Conferences.Service.Api.csproj", "{BF741E00-8ED5-4F3A-94DD-255AD502B685}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conference.Infra.CrossCutting.Identity", "src\Conference.Infra.CrossCutting.Identity\Conference.Infra.CrossCutting.Identity.csproj", "{EED36FC9-C358-480D-98EF-94EA66AD131C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{BF741E00-8ED5-4F3A-94DD-255AD502B685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF741E00-8ED5-4F3A-94DD-255AD502B685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF741E00-8ED5-4F3A-94DD-255AD502B685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED36FC9-C358-480D-98EF-94EA66AD131C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED36FC9-C358-480D-98EF-94EA66AD131C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED36FC9-C358-480D-98EF-94EA66AD131C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED36FC9-C358-480D-98EF-94EA66AD131C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{F3EBF67B-2F55-4280-8A16-C56907093970} = {B5BF4007-8BEB-49AD-BEA5-D760FCB4FF75}
 		{2F5A6D1F-FD05-42D6-8BCF-18212D5A9673} = {B5BF4007-8BEB-49AD-BEA5-D760FCB4FF75}
 		{BF741E00-8ED5-4F3A-94DD-255AD502B685} = {06470C86-0490-4ED2-B67E-F0D67F2183A2}
+		{EED36FC9-C358-480D-98EF-94EA66AD131C} = {106A37A2-945C-4383-890B-32BCDE8AFF97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61D2E44C-C315-4688-B9F8-AEAF6AF70EED}

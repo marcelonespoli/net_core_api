@@ -18,7 +18,7 @@ namespace Conferences.Infra.Data.Repository
 
         public override IEnumerable<Conference> GetAll()
         {
-            var sql = @"SELECT * FROM Conferences C" +
+            var sql = @"SELECT * FROM Conferences C " +
                       "WHERE C.Excluded = 0 " +
                       "ORDER BY C.EndDate DESC";
 
@@ -53,7 +53,7 @@ namespace Conferences.Infra.Data.Repository
 
         public IEnumerable<Conference> GetConferencesByOrganizer(Guid organizerId)
         {
-            var sql = @"SELECT * FROM Conferences C" +
+            var sql = @"SELECT * FROM Conferences C " +
                       "WHERE C.Excluded = 0 " +
                       "AND C.OrganizerId = @oid " +
                       "ORDER BY C.EndDate DESC";
